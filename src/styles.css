@@ -39,37 +39,37 @@
 :root {
   --radius: 0.625rem;
 
-  /* Modern, classy: deep ink + warm cream + amber accent */
-  --background: oklch(0.14 0.012 270);
-  --foreground: oklch(0.96 0.01 90);
+  /* Modern, classy: deep plum ink + soft lavender + violet accent */
+  --background: oklch(0.15 0.02 300);
+  --foreground: oklch(0.96 0.012 300);
 
-  --card: oklch(0.18 0.014 270);
-  --card-foreground: oklch(0.96 0.01 90);
+  --card: oklch(0.19 0.025 300);
+  --card-foreground: oklch(0.96 0.012 300);
 
-  --popover: oklch(0.18 0.014 270);
-  --popover-foreground: oklch(0.96 0.01 90);
+  --popover: oklch(0.19 0.025 300);
+  --popover-foreground: oklch(0.96 0.012 300);
 
-  /* Warm amber/gold — classy single accent */
-  --primary: oklch(0.82 0.13 75);
-  --primary-foreground: oklch(0.16 0.012 270);
-  --primary-glow: oklch(0.88 0.11 85);
+  /* Rich violet — classy single accent */
+  --primary: oklch(0.7 0.18 300);
+  --primary-foreground: oklch(0.16 0.02 300);
+  --primary-glow: oklch(0.8 0.15 310);
 
-  --secondary: oklch(0.24 0.015 270);
-  --secondary-foreground: oklch(0.96 0.01 90);
+  --secondary: oklch(0.25 0.025 300);
+  --secondary-foreground: oklch(0.96 0.012 300);
 
-  --muted: oklch(0.22 0.013 270);
-  --muted-foreground: oklch(0.7 0.012 90);
+  --muted: oklch(0.23 0.022 300);
+  --muted-foreground: oklch(0.72 0.018 300);
 
-  /* Soft sage as secondary accent for code/syntax flavour */
-  --accent: oklch(0.78 0.09 160);
-  --accent-foreground: oklch(0.16 0.012 270);
+  /* Soft lilac as secondary accent for code/syntax flavour */
+  --accent: oklch(0.78 0.11 320);
+  --accent-foreground: oklch(0.16 0.02 300);
 
   --destructive: oklch(0.62 0.2 25);
-  --destructive-foreground: oklch(0.98 0.01 90);
+  --destructive-foreground: oklch(0.98 0.01 300);
 
-  --border: oklch(0.32 0.012 270 / 55%);
-  --input: oklch(0.32 0.012 270 / 55%);
-  --ring: oklch(0.82 0.13 75);
+  --border: oklch(0.34 0.025 300 / 55%);
+  --input: oklch(0.34 0.025 300 / 55%);
+  --ring: oklch(0.7 0.18 300);
 
   /* Gradients & shadows */
   --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
