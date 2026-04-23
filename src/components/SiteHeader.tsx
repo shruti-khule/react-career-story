@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Download, Menu, X } from "lucide-react";
 
@@ -22,15 +22,18 @@ export function SiteHeader() {
 
         <nav className="hidden gap-1 md:flex">
           {links.map((l) => (
-            <Link
+            <NavLink
               key={l.to}
               to={l.to}
-              className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
-              activeProps={{ className: "rounded-md px-3 py-2 text-sm text-foreground bg-secondary" }}
-              activeOptions={{ exact: l.to === "/" }}
+              end={l.to === "/"}
+              className={({ isActive }) =>
+                isActive
+                  ? "rounded-md bg-secondary px-3 py-2 text-sm text-foreground"
+                  : "rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              }
             >
               {l.label}
-            </Link>
+            </NavLink>
           ))}
           <a
             href="/shruti-khule-cv.pdf"
@@ -54,16 +57,19 @@ export function SiteHeader() {
       {open && (
         <nav className="flex flex-col gap-1 border-t border-border/60 px-6 py-3 md:hidden">
           {links.map((l) => (
-            <Link
+            <NavLink
               key={l.to}
               to={l.to}
+              end={l.to === "/"}
               onClick={() => setOpen(false)}
-              className="rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground"
-              activeProps={{ className: "rounded-md px-3 py-2 text-sm text-foreground bg-secondary" }}
-              activeOptions={{ exact: l.to === "/" }}
+              className={({ isActive }) =>
+                isActive
+                  ? "rounded-md bg-secondary px-3 py-2 text-sm text-foreground"
+                  : "rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground"
+              }
             >
               {l.label}
-            </Link>
+            </NavLink>
           ))}
           <a
             href="/shruti-khule-cv.pdf"

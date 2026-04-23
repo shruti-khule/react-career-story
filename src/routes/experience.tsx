@@ -1,25 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/Section";
 import { Briefcase, Linkedin, Quote } from "lucide-react";
-
-export const Route = createFileRoute("/experience")({
-  component: ExperiencePage,
-  head: () => ({
-    meta: [
-      { title: "Experience — Shruti Khule" },
-      {
-        name: "description",
-        content:
-          "Professional experience at Fraunhofer IEM and German Sport University — AI systems, full-stack web platforms.",
-      },
-      { property: "og:title", content: "Experience — Shruti Khule" },
-      {
-        property: "og:description",
-        content: "Roles, achievements, and the systems I’ve built.",
-      },
-    ],
-  }),
-});
 
 type Role = {
   title: string;
@@ -49,10 +29,8 @@ const roles: Role[] = [
     company: "Fraunhofer IEM",
     location: "Paderborn, Germany",
     period: "05/2024 – 12/2025",
-    mobileHighlights: [
-      ],
-    bullets: [
-    ],
+    mobileHighlights: [],
+    bullets: [],
     subProjects: [
       {
         name: "AI-Augmented Document Management System",
@@ -120,37 +98,38 @@ const recommendations: Recommendation[] = [
     quote:
       "I worked with Shruti for more than 1 and a half years. She is excellent in Teamwork, reporting progress and can fit in teams quickly. She has great understanding to system architecture and AI Applications and can program agents which is very important coming into 2026. She worked with me programming an enterprise level system and she excels in writing clean backend code, maintainable architecture and she is familiar with Frontend frameworks too like React. She is a strong Full Stack Developer and i recommend her to any team working on Software!",
     author: "Jamil Mounzer",
-    position: "Founder & CEO von Optimaite | Softwareingenieur & KI-Experte bei Fraunhofer | Spezialist für lokale Modelle & Dokumenteverarbeitung",
+    position:
+      "Founder & CEO von Optimaite | Softwareingenieur & KI-Experte bei Fraunhofer | Spezialist für lokale Modelle & Dokumenteverarbeitung",
     role: "Student Assistant",
     linkedinUrl: "https://www.linkedin.com/in/replace-with-exact-link/",
   },
 ];
 
 const mobileProjectHighlights: Record<string, string[]> = {
-  "AI-Augmented Document Management System":
-    [
-      "Built AI document review platform (Next.js + FastAPI) for legal workflows.",
-      "Created multi-agent LLM assistant automating analysis → ~60% faster reviews.",
-    
-    ],
-  "Artificial Intelligence for Systems Engineering":
-    [
-      "Developed GenAI + RAG system for ASPICE automotive document assessment.",
-      "Built an AI dashboard with react, Django & postgresql, for document analysis and engineering guidance.",
-    ],
-  "AI-Augmented Solution for Scenario-Based Optimization":
-    [
-      "Designed GenAI pipeline generating hazard & threat visualizations from text scenarios.",
-      "Deployed AI web platform using diffusion models ( ComfyUI) for automated scenario analysis.",
-    ],
+  "AI-Augmented Document Management System": [
+    "Built AI document review platform (Next.js + FastAPI) for legal workflows.",
+    "Created multi-agent LLM assistant automating analysis → ~60% faster reviews.",
+  ],
+  "Artificial Intelligence for Systems Engineering": [
+    "Developed GenAI + RAG system for ASPICE automotive document assessment.",
+    "Built an AI dashboard with react, Django & postgresql, for document analysis and engineering guidance.",
+  ],
+  "AI-Augmented Solution for Scenario-Based Optimization": [
+    "Designed GenAI pipeline generating hazard & threat visualizations from text scenarios.",
+    "Deployed AI web platform using diffusion models ( ComfyUI) for automated scenario analysis.",
+  ],
 };
 
-function ExperiencePage() {
+export default function ExperiencePage() {
   return (
     <Section
       eyebrow="Career"
       title="Experience"
-      description={<span className="hidden sm:inline">Roles where I’ve shipped AI systems and full-stack products.</span>}
+      description={
+        <span className="hidden sm:inline">
+          Roles where I’ve shipped AI systems and full-stack products.
+        </span>
+      }
     >
       <ol className="relative space-y-5 border-l-0 pl-0 sm:space-y-8 sm:border-l sm:border-border/60 sm:pl-6">
         {roles.map((r) => (
@@ -199,10 +178,12 @@ function ExperiencePage() {
                         ) : null}
                       </div>
                       <ul className="mt-1 ml-4 list-disc space-y-1 text-xs text-muted-foreground sm:hidden">
-                        {(mobileProjectHighlights[project.name] ?? [
-                          "Sample point: Project details shown in compact mobile form.",
-                          "Sample point: Additional mobile summary content for this project.",
-                        ]).map((point) => (
+                        {(
+                          mobileProjectHighlights[project.name] ?? [
+                            "Sample point: Project details shown in compact mobile form.",
+                            "Sample point: Additional mobile summary content for this project.",
+                          ]
+                        ).map((point) => (
                           <li key={point}>{point}</li>
                         ))}
                       </ul>
@@ -249,9 +230,7 @@ function ExperiencePage() {
                 </a>
               </div>
               <Quote size={16} className="mb-2 text-primary/70" />
-              <p className="text-sm leading-relaxed text-muted-foreground italic">
-                "{item.quote}"
-              </p>
+              <p className="text-sm leading-relaxed text-muted-foreground italic">"{item.quote}"</p>
               <div className="mt-4 border-t border-border/60 pt-3">
                 <p className="text-sm font-medium text-foreground">{item.author}</p>
                 <p className="text-xs text-muted-foreground">{item.position}</p>

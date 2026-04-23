@@ -1,21 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Section } from "@/components/Section";
 import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
-
-export const Route = createFileRoute("/contact")({
-  component: ContactPage,
-  head: () => ({
-    meta: [
-      { title: "Contact — Shruti Khule" },
-      {
-        name: "description",
-        content: "Get in touch with Shruti Khule — email, phone, GitHub and LinkedIn.",
-      },
-      { property: "og:title", content: "Contact — Shruti Khule" },
-      { property: "og:description", content: "Let’s build something together." },
-    ],
-  }),
-});
 
 const items = [
   {
@@ -40,7 +24,7 @@ const items = [
   },
 ];
 
-function ContactPage() {
+export default function ContactPage() {
   return (
     <Section
       eyebrow="Contact"

@@ -1,24 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { MessageCircle, MapPin, Coffee, Download } from "lucide-react";
-
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "Shruti Khule — Software Developer" },
-      {
-        name: "description",
-        content:
-          "Personal site of Shruti Khule — software developer based in Paderborn, building AI systems and full-stack web apps.",
-      },
-      { property: "og:title", content: "Shruti Khule — Software Developer" },
-      {
-        property: "og:description",
-        content: "Personal site — software developer building AI systems and full-stack web apps.",
-      },
-    ],
-  }),
-});
 
 const stack = [
   "python",
@@ -32,12 +13,10 @@ const stack = [
   "langgraph",
 ];
 
-function Index() {
+export default function HomePage() {
   return (
     <section className="relative">
       <div className="mx-auto max-w-4xl px-6 pt-10 pb-10 sm:pt-12">
-        
-
         {/* Greeting */}
         <h1 className="mt-3 font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
           Hey, I’m Shruti. <span className="inline-block"></span>
@@ -48,8 +27,9 @@ function Index() {
         </h1>
 
         <p className="mobile-tight mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground mobile-text-sm">
-        I’m a full-stack developer focused on Generative AI, backend systems, and intelligent automation.
-        I can design and ship reliable AI applications - from LLM pipelines and multi-agent systems to scalable APIs and modern web interfaces.
+          I’m a full-stack developer focused on Generative AI, backend systems, and intelligent
+          automation. I can design and ship reliable AI applications - from LLM pipelines and
+          multi-agent systems to scalable APIs and modern web interfaces.
         </p>
 
         {/* Terminal card */}
@@ -62,8 +42,7 @@ function Index() {
           </div>
           <pre className="overflow-x-auto px-4 py-3.5 font-mono text-xs leading-relaxed sm:text-sm">
             <code>
-              <span className="text-accent">$</span>{" "}
-              <span className="text-foreground">whoami</span>
+              <span className="text-accent">$</span> <span className="text-foreground">whoami</span>
               {"\n"}
               <span className="text-muted-foreground">shruti khule — software developer</span>
               {"\n\n"}
@@ -76,7 +55,7 @@ function Index() {
               <span className="text-foreground">cat now.md</span>
               {"\n"}
               <span className="text-muted-foreground">
-              deepening system design skills.
+                deepening system design skills.
                 {"\n"}building AI agent prototypes. learning more German.
               </span>
               {"\n\n"}
