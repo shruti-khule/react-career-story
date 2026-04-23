@@ -1,12 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/experience", label: "Experience" },
-  { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -33,6 +32,14 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
+          <a
+            href="/shruti-khule-cv.pdf"
+            download
+            className="inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+          >
+            <Download size={16} />
+            CV
+          </a>
         </nav>
 
         <button
@@ -58,6 +65,15 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
+          <a
+            href="/shruti-khule-cv.pdf"
+            download
+            onClick={() => setOpen(false)}
+            className="inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground"
+          >
+            <Download size={16} />
+            Download CV
+          </a>
         </nav>
       )}
     </header>

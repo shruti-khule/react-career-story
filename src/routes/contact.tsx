@@ -30,7 +30,7 @@ const items = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/shruti-khule",
-    href: "https://linkedin.com/in/shruti-khule",
+    href: "https://www.linkedin.com/in/shruti-khule-3b715520a/",
   },
   {
     icon: Github,

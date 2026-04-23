@@ -2,9 +2,9 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-border/60">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
-        <p className="text-sm text-muted-foreground">
+    <footer className="mt-10 border-t border-border/60">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-6 sm:flex-row">
+        <p className="text-[10px] text-muted-foreground">
           © {new Date().getFullYear()} Shruti Khule. Built with React.
         </p>
         <div className="flex items-center gap-4">
@@ -25,7 +25,7 @@ export function SiteFooter() {
             <Github size={18} />
           </a>
           <a
-            href="https://linkedin.com/in/shruti-khule"
+            href="https://www.linkedin.com/in/shruti-khule-3b715520a/"
             target="_blank"
             rel="noreferrer"
             className="text-muted-foreground transition-colors hover:text-primary"
